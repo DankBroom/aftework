@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+body{
+    background-color: #fff;
+    color: #000;
+    font-family: 'Open Sans Condensed', cursive;
+    transition: .3s;
+}
+body.dark-theme{
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Open Sans Condensed', cursive;
+    transition: .3s;
+}
+
+
+body nav{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+    color: #FFF;
+}
+body.dark-theme nav{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+    color: #000;
+}
+
+nav .titre{
+    display: flex;
+}
+.toggle{
+    margin-top: 30px;
+}
+.toggle input[type='checkbox'] {
+    display: none;
+}
+
+.toggle label {
+    background-color: #777;
+    border: 2px solid #555;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    width: 100px;
+    height: 50px;
+}
+.toggle label::after {
+    background-color: #555;
+    border-radius: 50%;
+    content: ' ';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: all ease-in-out 0.3s;
+    width: 42px;
+    height: 42px;
+}
+.toggle input[type='checkbox']:checked ~ label {
+    background-color: #00a0fc;
+    border-color: #006dc9;
+}
+
+.toggle input[type='checkbox']:checked ~ label::after {
+    background-color: #0054b0;
+    transform: translateX(50px);
+}
+
+nav .titre img{
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+nav .titre h1{
+    font-size: 50px;
+    margin-top: 30px;
+	color: #FFF;
+	transition: .6s;
+    font-family: 'Grechen Fuemen', cursive;
+}
+nav .titre h1:hover{
+	text-decoration: underline;
+    font-size: 55px;
+    margin-top: 30px;
+  	color: #ebaf4c;
+}
+nav .onglets{
+    margin-right: 20px;
+    margin-top: 30px;
+}
+nav .onglets  a{
+  	text-decoration: none;
+  	color: #FFF;
+  	margin-right: 10px;
+	font-size: 25px;
+  	transition: .3s;
+}
+nav .onglets  a:hover{
+	color: #ebaf4c;
+	font-size: 30px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+nav .onglets .actual{
+  	text-decoration: none;
+  	color: #ebaf4c;
+	font-size: 25px;
+    margin-right: 10px;
+  	transition: .3s;
+}
+nav .onglets .actual:hover{
+	color: #FFF;
+	font-size: 30px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+
+.titleArticles{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+
+
+.articles{
+	margin-top: 30px;
+}
+.articles .article{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+    margin-left: 12.5%;
+    width: 75%;
+    height: 300px;
+    border-top: 1px solid rgb(129,129,129);
+    border-left: 1px solid rgb(129,129,129);
+    background: rgba(76,106,75,0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+.articles .article .left img{
+    margin-top: 25px;
+    margin-left: 25px;
+	height: 250px;
+	width: 250px;
+}
+.articles .article .right{
+	max-width: 50%;
+	margin-left: 40px;
+}
+body .articles .article .right a{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 25px;
+  transition: .3s;
+}
+body .articles .article .right a:hover{
+    color: #ebaf4c;
+    text-decoration: underline;
+  }
+.articles .article .right p.date{
+	color: #68d065;
+}
+.articles .article .right p.description{
+	color: #fff;
+}
+footer hr{
+    width: 45%;
+}
+
+
+@media only screen and (max-width: 600px){
+    body{
+        background-image: none;
+    }
+
+
+    nav{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        color: #FFF;
+    }
+    nav .titre{
+        display: flex;
+    }
+    nav .titre img{
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+    nav .titre h1{
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    nav .titre h1:hover{
+        font-size: 30px;
+        margin-top: 12px;
+    }
+    nav .onglets{
+        margin-top: 10px;
+    }
+    nav .onglets  a{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    nav .onglets  a:hover{
+        font-size: 25px;
+    }
+    nav .onglets .actual{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    nav .onglets .actual:hover{
+        font-size: 25px;
+    }
+
+
+    .articles{
+        margin-top: 20px;
+    }
+    .articles .article{
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .articles .article .left img{
+        margin-top: 10px;
+        margin-left: 10px;
+        height: auto;
+        width: 92%;
+    }
+    .articles .article .right{
+        max-width: 75%;
+        margin-left: 10px;
+    }
+    body .articles .article .right a{
+      font-size: 25px;
+      transition: .3s;
+    }
+    .articles .article .right p.description{
+        font-size: 20px;
+    }
+    
+    footer hr{
+        width: 85%;
+    }
+}

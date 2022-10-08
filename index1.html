@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="AfteWork" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/logo.png" />
+        <meta property="og:url" content="https://aftework.ml/" />
+        <meta property="og:description" content="Serveur PVP-Faction, versions : 1.8 à 1.18, IP : aftework.omgcraft.fr" />
+        <title>AfteWork - Serveur PVP-Faction</title>
+        <link rel="icon" type="image/png" href="/assets/logo.png">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <nav>
+            <div class="titre">
+                <img src="/assets/logo.png">
+                <h1>AfteWork</h1>
+            </div>
+            <div class="toggle">
+                <p>dark mode : </p>
+                <input type="checkbox" id="toggle" />
+                <label for="toggle"></label>
+            </div>
+            <div class="onglets">
+                <a href="//aftework.ml" class="actual">Accueil</a>
+                <a href="/projets/">Règles</a>
+                <a href="/blog/">Blog</a>
+                <a href="/informations/">Jouer</a>
+            </div>
+        </nav>
+
+        <p align="center" class="titleArticles">Derniers posts publiés :</p>
+  
+        <section class="articles">
+            <div class="article">
+                    
+                <div class="left">
+                    <a href="/articles/creation-du-site/"><img src="/assets/logo.png"></a>
+                </div>
+                    
+                <div class="right">
+                    <p class="date">08/10/2022</p>
+                    
+                    <a href="/articles/creation-du-site/"><h1>Création du site</h1></a>
+                    <p class="description">Premier article du site !</p>
+                    <p class="auteur">DankBroom228555</p>
+                </div>
+                    
+            </div>
+        </section>
+
+        <footer>
+            <hr size="4" align="center" noshade="noshade" \>
+            <p align="center">&copy AfteWork - [MAIL]</p>
+        </footer>
+
+        <script>
+            const toggle = document.getElementById('toggle');
+            const body = document.body;
+
+            toggle.addEventListener('input', e => {
+                const isChecked = e.target.checked;
+                if (isChecked) {
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                }
+            });
+        </script>
+    </body>
+</html>
