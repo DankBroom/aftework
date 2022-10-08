@@ -4,5 +4,26 @@
     </head>
     <body>
         SOON...
+        <script>
+            const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
+
+            await lib.discord.channels['@0.3.2'].messages.create({
+            "channel_id": `${context.params.event.channel_id}`,
+            "content": "",
+            "tts": false,
+            "embeds": [
+                {
+                "type": "rich",
+                "title": `AfteWork`,
+                "description": `Site en cours de développement...`,
+                "color": 0xff7700,
+                "footer": {
+                    "text": `Embed by autocode.com`
+                },
+                "url": `https://aftework.ml`
+                }
+            ]
+            });
+        </script>
     </body>
 </html>
