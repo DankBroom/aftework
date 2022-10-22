@@ -171,15 +171,8 @@ body.dark-theme .articles .article{
     border-radius: 10px;
 }
 
-.articles .article .left img{
-    margin-top: 25px;
-    margin-left: 25px;
-	height: 250px;
-	width: 250px;
-}
-
 .articles .article .right{
-	max-width: 50%;
+	max-width: 90%;
 	margin-left: 40px;
 }
 
@@ -190,22 +183,6 @@ body .articles .article .right a{
   font-size: 25px;
   transition: .3s;
 }
-body .articles .article .right a{
-    color: #202020;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 25px;
-    transition: .3s;
-  }y
-
-body .articles .article .right a:hover{
-    color: #ebaf4c;
-    text-decoration: underline;
-}
-body.dark-mode .articles .article .right a:hover{
-    color: #ebaf4c;
-    text-decoration: underline;
-}
 
 body .articles .article .right p.date{
 	color: #d50000;
@@ -213,13 +190,11 @@ body .articles .article .right p.date{
 body.dark-mode .articles .article .right p.date{
 	color: #d50000;
 }
+body .articles .article .right h1{
+	font-size: 40px;
+}
 
-body .articles .article .right p.description{
-	color: #dfdfdf;
-}
-body.dark-mode .articles .article .right p.description{
-	color: #202020;
-}
+
 
 body footer hr{
     width: 45%;
