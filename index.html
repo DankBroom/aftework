@@ -1,16 +1,86 @@
 <html>
     <head>
-        <meta property="og:title" content="AfteWork - Serveur Minecraft" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="AfteWork - Serveur PVP-Faction" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://media.discordapp.net/attachments/1027236734104240204/1028264740599898172/308580558_1742931312730916_49104465965165329_n.png" />
-        <meta property="og:url" content="https://aftework.ml/" />
-        <meta property="og:description" content="Site en développement...." />
-        <title>AfteWork - site en développement</title>
+        <meta property="og:image" content="/assets/logo.png" />
+        <meta property="og:url" content="https://aftework.ml/index1.html" />
+        <meta property="og:description" content="aftework.omgcraft.fr, 1.8 à 1.19" />
+        <title>AfteWork - Serveur PVP-Faction</title>
         <link rel="icon" href="/assets/big_logo.png">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <label for="file">site creation progress:</label>
+        <nav>
+            <div class="titre">
+                <img src="/assets/logo.png">
+                <h1>AfteWork</h1>
+            </div>
+            <div class="toggle">
+                <input type="checkbox" id="toggle" />
+                <label for="toggle"></label>
+            </div>
+            <div class="onglets">
+                <a href="//aftework.ml" class="actual">Accueil</a>
+                <a href="/rules/">Règles</a>
+                <a href="/informations/">Informations</a>
+                <a href="/play/">Jouer</a>
+            </div>
+        </nav>
 
-        <progress id="file" max="100" value="95"> 95% </progress> 95%
+        <p align="center" class="titleArticles">Derniers posts publiés :</p>
+  
+        <section class="articles">
+            <div class="article">
+                    
+                <div class="left">
+                    <a href="/rules/"><img src="/assets/logo.png"></a>
+                </div>
+                    
+                <div class="right">
+                    <p class="date">22/10/2022</p>
+                    
+                    <a href="/rules/"><h1>Règles du serveur</h1></a>
+                    <p class="description">Découvrez les règles à ne pas enfreindre !</p>
+                    <p class="auteur">Staff AfteWork</p>
+                </div>
+                    
+            </div>
+
+            <div class="article">
+                    
+                <div class="left">
+                    <a href="/articles/creation-du-site/"><img src="/assets/logo.png"></a>
+                </div>
+                    
+                <div class="right">
+                    <p class="date">22/10/2022</p>
+                    
+                    <a href="/articles/creation-du-site/"><h1>Venez Jouer avec nous !</h1></a>
+                    <p class="description">Cliquez sur le titre, On se retrouve en jeu !</p>
+                    <p class="auteur">DankBroom228555</p>
+                </div>
+                    
+            </div>
+        </section>
+
+        <footer>
+            <hr size="4" align="center" noshade="noshade" \>
+            <p align="center">AfteWork - contact@aftework.ml</p>
+        </footer>
+
+        <script>
+            const toggle = document.getElementById('toggle');
+            const body = document.body;
+
+            toggle.addEventListener('input', e => {
+                const isChecked = e.target.checked;
+                if (isChecked) {
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                }
+            });
+        </script>
     </body>
 </html>
